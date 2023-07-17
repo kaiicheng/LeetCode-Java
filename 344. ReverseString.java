@@ -10,7 +10,7 @@ public class ReverseString344 {
 	// [I@24d46ca6
 	static int [] str3 = {'H', 'e', 'l', 'l', 'o'};	
 	
-	public static void solution(char [] input) {
+	public static char[] solution(char [] input) {
 		// TODO Auto-generated method stub
 
 		// input
@@ -32,11 +32,11 @@ public class ReverseString344 {
 			i++;
 			j--;
 		}
-		System.out.println(str);	
+		return str;
 	}
 	
 	public static void main(String[] args) {
-		
 		solution(str);
+		System.out.println(str);
 	}
 }
