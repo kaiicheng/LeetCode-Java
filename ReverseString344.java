@@ -1,6 +1,6 @@
 
 public class ReverseString344 {
-
+	
 	// Hello
 	static char [] str = {'H', 'e', 'l', 'l', 'o'};	
 
@@ -10,29 +10,33 @@ public class ReverseString344 {
 	// [I@24d46ca6
 	static int [] str3 = {'H', 'e', 'l', 'l', 'o'};	
 	
-	public static void main(String[] args) {
-//	public static void main(String str) {
+	public static void solution(char [] input) {
 		// TODO Auto-generated method stub
 
 		// input
 		// Hello
-		System.out.println(str);
+		// System.out.println(input);
 		
 		// initialize two pointer
-		int i = 0; int j = str.length - 1;
+		int i = 0; int j = input.length - 1;
 		
-		System.out.println(str[i]);
-		System.out.println(str[j]);
+		// System.out.println(input[i]);
+		// System.out.println(input[j]);
 
 		// loop over sting from two directions
 		while (i < j) {
 			// swap str[i] and str[j]
-			char temp = str[i];
-			str[i] = str[j];
-			str[j] = temp;
+			char temp = input[i];
+			input[i] = input[j];
+			input[j] = temp;
 			i++;
 			j--;
 		}
-		System.out.println(str);
+		System.out.println(str);	
+	}
+	
+	public static void main(String[] args) {
+		
+		solution(str);
 	}
 }
