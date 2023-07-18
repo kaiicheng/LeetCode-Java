@@ -6,10 +6,12 @@ public class TrappingRainWater42_BruteForce {
 	
 	public static int solution(int [] input) {
 
+		// only add one column by each time
+		// because we need to consider the depth of each height[i]
+		
 		// ans
 		int ans = 0;
 	
-		// only add one column by each time
 		// iterate the array from left to right
 		for (int i = 1; i < input.length - 1; i++) {
 
