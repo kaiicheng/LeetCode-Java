@@ -19,8 +19,8 @@ public class TrappingRainWater42_TwoPointer {
 		while (left < right) {
 			if (input[left] < input[right]) {
 				
-				// incorrect in Java
-//				boolean (input[left] >= left_max) ? (left_max = input[left]) : (ans += left_max - input[left]);
+				// incorrect in Java, works in C++
+//				input[left] >= left_max ? (left_max = input[left]) : ans += (left_max - input[left]);
 				
 				// equal to:
 				if (input[left] >= left_max) {
@@ -32,8 +32,8 @@ public class TrappingRainWater42_TwoPointer {
 				left++;
 			} else {
 				
-				// incorrect in Java
-//				boolean (input[right] >= right_max ? (right_max = input[right]) : (ans += right_max - input[right]);
+				// incorrect in Java, works in C++
+//				input[right] >= right_max ? (right_max = input[right]) : ans += (right_max - input[right]);
 				
 				
 				// equal to:
