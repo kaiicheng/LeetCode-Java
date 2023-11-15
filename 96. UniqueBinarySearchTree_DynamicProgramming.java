@@ -5,15 +5,19 @@
 
 public class UniqueBinarySearchTree {
 
+	// reference
 	static Integer[] memo;
 
 	public static int solution(int n) {
 
+		// initialize memoization with n+1 slots
 		memo = new Integer[n + 1];
 		return dfs(n);
 	}
 
 	public static int dfs(int n){
+
+		// base case
 		if (n <= 1){
 			return 1;
 		}
@@ -22,6 +26,8 @@ public class UniqueBinarySearchTree {
 			return memo[n];
 		}
 
+		// transition rule
+		// ask subproblems for answer
 		int res = 0;
 		for (int i = 1; i <= n; i++){
 			int left = dfs(i - 1);
@@ -29,6 +35,7 @@ public class UniqueBinarySearchTree {
 			res += left * right;
 		}
 	
+		// update memo[n] and return result
 		memo[n] = res;
 		return res;
 	}
