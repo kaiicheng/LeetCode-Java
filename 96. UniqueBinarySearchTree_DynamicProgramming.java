@@ -17,11 +17,12 @@ public class UniqueBinarySearchTree {
 
 	public static int dfs(int n){
 
-		// base case
+		// base case, return 1
 		if (n <= 1){
 			return 1;
 		}
 
+		// if memo[n]!=null, then return memo[n]
 		if (memo[n] != null){
 			return memo[n];
 		}
@@ -41,6 +42,6 @@ public class UniqueBinarySearchTree {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(solution(3));	
+		System.out.println(solution(4));	
 	}
 }
