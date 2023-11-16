@@ -1,3 +1,11 @@
+// Queue<String> queue = new LinkedList<String>();
+// queue.offer("a");
+// queue.offer("b");
+// queue.offer("c");
+// System.out.println("poll="+queue.poll());  // a
+// System.out.println("element="+queue.element());  // b
+// System.out.println("peek="+queue.peek());  // b
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -20,14 +28,19 @@ public class MaximumDepthofBinaryTree104_BFS {
     }
 	
     public static int solution(TreeNode root) {
+
+		System.out.println(root.val);
+
         if (root == null) {
         	return 0;
         }
         
         int depth = 0;
         Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
-    
+        System.out.println(queue.peek());
+		queue.offer(root);
+	    System.out.println(queue.peek());
+
         while(!queue.isEmpty()) {
         	int size = queue.size();
         	for (int i = 0; i <size; i++) {
